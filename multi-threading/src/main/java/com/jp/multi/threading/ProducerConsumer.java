@@ -13,8 +13,9 @@ import com.jp.threads.Producer;
 public class ProducerConsumer {
 	public static void main(String[] args) {
 		Queue<String> queue = new LinkedList<String>();
-		new Thread(new Consumer(queue)).start();
 		new Thread(new Producer(queue)).start();
+		new Thread(new Consumer(queue)).start();
+
 
 	}
 }
